@@ -1,9 +1,12 @@
 {
   "name": "markdown-helpers",
   "main": "./lib/markdown-helpers",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Markdown helpers",
-  "activationEvents": ["markdown-helpers:convert-link", "markdown-helpers:convert-image"],
+  "activationEvents": [
+    "markdown-helpers:convert-link",
+    "markdown-helpers:convert-image"
+  ],
   "repository": "https://github.com/catacgc/markdown-helpers",
   "license": "MIT",
   "engines": {
