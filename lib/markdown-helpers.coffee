@@ -11,6 +11,8 @@ module.exports =
     selection = editor.getSelection()
     text = selection.getText()
 
+    return unless text
+
     callback = (text) => @updateSelection(text)
 
     convertor.convert(text, callback)
