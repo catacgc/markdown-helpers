@@ -33,7 +33,6 @@ class GoogleWebConvertor
         request.get({url: @url + text, json:true}, handler)
 
     handleResponse: (json, callback) ->
-      console.log(json.responseData.results)
       text = json.responseData.results[0].titleNoFormatting
       link = json.responseData.results[0].unescapedUrl
 
