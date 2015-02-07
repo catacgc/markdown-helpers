@@ -3,8 +3,10 @@ request = require('request')
 
 module.exports =
   activate: (state) ->
-    atom.workspaceView.command "markdown-helpers:convert-link", => @convert(new GoogleWebConvertor())
-    atom.workspaceView.command "markdown-helpers:convert-image", => @convert(new GoogleImageConvertor())
+    atom.commands.add "atom-text-editor",
+      "markdown-helpers:convert-link": => @convert(new GoogleWebConvertor())
+    atom.commands.add "atom-text-editor",
+      "markdown-helpers:convert-image": => @convert(new GoogleImageConvertor())
 
   convert: (convertor) ->
     editor = atom.workspace.activePaneItem
