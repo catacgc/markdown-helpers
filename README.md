@@ -17,3 +17,8 @@ The gif above should be self explanatory:
 4. press enter and the Auto Markdown package automatically replaces your
 selection with the first Google search result for the selection text:
 `[First Result Page Title](First Result Link)`
+
+## Changelog
+
+### 0.2.2
+- fix deprecations for latest versions of atom (tks @jonaswisplinghoff)
