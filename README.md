@@ -20,7 +20,7 @@ selection with the first Google search result for the selection text:
 
 ## Changelog
 
-## 0.3.1
+## 0.3.2
 - remove 1.0 deprecations
 - use original text as title for the url
 - moved changelog here
