@@ -20,5 +20,10 @@ selection with the first Google search result for the selection text:
 
 ## Changelog
 
+## 0.3.1
+- remove 1.0 deprecations
+- use original text as title for the url
+- moved changelog here
+
 ### 0.2.2
 - fix deprecations for latest versions of atom (tks @jonaswisplinghoff)
