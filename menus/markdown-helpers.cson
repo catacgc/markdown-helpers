@@ -1,7 +1,6 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 'context-menu':
-  '.overlayer':
-      'Enable markdown-helpers': 'markdown-helpers:toggle'
+    'atom-workspace':[{'label':'Enable markdown-helpers', 'command': 'markdown-helpers:toggle'}]
 
 'menu': [
   {

@@ -1,16 +1,17 @@
 {
   "name": "markdown-helpers",
-  "main": "./lib/markdown-helpers",
-  "version": "0.2.2",
+  "main": "./lib/main",
+  "version": "0.2.3",
   "description": "Markdown helpers",
-  "activationEvents": [
-    "markdown-helpers:convert-link",
-    "markdown-helpers:convert-image"
-  ],
+  "activationCommands": {
+      "atom-workspace": [
+        "markdown-helpers:convert-link",
+        "markdown-helpers:convert-image"
+  ]},
   "repository": "https://github.com/catacgc/markdown-helpers",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": "*"
   },
   "dependencies": {
     "request": "2.36.0"

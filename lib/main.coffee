@@ -9,8 +9,8 @@ module.exports =
       "markdown-helpers:convert-image": => @convert(new GoogleImageConvertor())
 
   convert: (convertor) ->
-    editor = atom.workspace.activePaneItem
-    selection = editor.getSelection()
+    editor = atom.workspace.getActivePaneItem()
+    selection = editor.getLastSelection()
     text = selection.getText()
 
     return unless text
@@ -20,8 +20,8 @@ module.exports =
     convertor.convert(text, callback)
 
   updateSelection: (text) ->
-    editor = atom.workspace.activePaneItem
-    selection = editor.getSelection()
+    editor = atom.workspace.getActivePaneItem()
+    selection = editor.getLastSelection()
     selection.insertText(text)
 
 
@@ -32,12 +32,12 @@ class GoogleWebConvertor
 
     convert: (text, callback) ->
         handler = (error, response, body) =>
-            @handleResponse(body, callback)
+            @handleResponse(text, body, callback)
 
         request.get({url: @url + text, json:true}, handler)
 
-    handleResponse: (json, callback) ->
-      text = json.responseData.results[0].titleNoFormatting
+    handleResponse: (text, json, callback) ->
+      result_title = json.responseData.results[0].titleNoFormatting
       link = json.responseData.results[0].unescapedUrl
 
       callback(@format(text, link))
